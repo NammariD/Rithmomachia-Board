@@ -1,4 +1,4 @@
-package Rithmomachia;
+package main.java.Rithmomachia;
 
 import java.util.Scanner;
 

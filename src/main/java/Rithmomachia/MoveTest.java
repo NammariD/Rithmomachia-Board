@@ -1,4 +1,4 @@
-package Rithmomachia;
+package main.java.Rithmomachia;
 
 import org.junit.Test;
 
@@ -29,7 +29,7 @@ public class MoveTest {
         };
         Board b = new Board(5, 5, s);
         Piece p = b.getPiece(3,3);
-        Set<Move> moves = p.findMoves(3, 3, b);
+        Set<Move> moves = p.findMoves(b);
         assertEquals(8, moves.size());
     }
 }

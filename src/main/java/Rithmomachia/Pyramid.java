@@ -1,4 +1,4 @@
-package Rithmomachia;
+package main.java.Rithmomachia;
 
 import java.util.Set;
 import java.util.HashMap;
@@ -109,15 +109,15 @@ public class Pyramid extends Piece {
                 switch (pieceType) {
                     case "C":
                         Circle circleToCheck = (Circle) pieces.get(pieceType).toArray()[0];
-                        moves.addAll(circleToCheck.findMoves(row, col, board));
+                        moves.addAll(circleToCheck.findMoves(board));
                         break;
                     case "T":
                         Triangle triangleToCheck = (Triangle) pieces.get(pieceType).toArray()[0];
-                        moves.addAll(triangleToCheck.findMoves(row, col, board));
+                        moves.addAll(triangleToCheck.findMoves(board));
                         break;
                     case "S":
                         Square squareToCheck = (Square) pieces.get(pieceType).toArray()[0];
-                        moves.addAll(squareToCheck.findMoves(row, col, board));
+                        moves.addAll(squareToCheck.findMoves(board));
                         break;
                     default:
                         break;
@@ -139,18 +139,18 @@ public class Pyramid extends Piece {
                     case "C":
                         for (Integer value : values) {
                             Circle virtualCircle = new Circle(this.getColor(), value, row, col);
-                            encounters.addAll(virtualCircle.encounterCapture(row, col, board));
+                            encounters.addAll(virtualCircle.encounterCapture(board));
                         }
                         break;
                     case "T":
                         for (Integer value : values) {
                             Triangle virtualTriangle = new Triangle(this.getColor(), value, row, col);
-                            encounters.addAll(virtualTriangle.encounterCapture(row, col, board));
+                            encounters.addAll(virtualTriangle.encounterCapture(board));
                         }
                         break;
                     case "S":
                         Square squareToCheck = (Square) pieces.get(pieceType).toArray()[0];
-                        encounters.addAll(squareToCheck.encounterCapture(row, col, board));
+                        encounters.addAll(squareToCheck.encounterCapture(board));
                         break;
                     default:
                         break;

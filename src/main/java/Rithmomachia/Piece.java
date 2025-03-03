@@ -1,4 +1,4 @@
-package Rithmomachia;
+package main.java.Rithmomachia;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -23,7 +23,7 @@ public abstract class Piece {
     }
 
     // What is row col? The piece's current row and col??? Do we need this??
-    public Set<Move> findMoves(int row, int col, Board board) {
+    public Set<Move> findMoves(Board board) {
         Set<Move> mm = new HashSet<>();
         int distance = getMoveSpaces();
 
@@ -122,7 +122,7 @@ public abstract class Piece {
 
 
     // What is row col? The piece's current row and col??? Do we need this??
-    public Set<Pos> encounterCapture(int row, int col, Board board) {
+    public Set<Pos> encounterCapture(Board board) {
         Set<Pos> pp = new HashSet<>();
         int distance = getMoveSpaces();
 

@@ -1,4 +1,4 @@
-package Rithmomachia;
+package main.java.Rithmomachia;
 
 public class Circle extends Piece {
     public Circle(Color color, int value, int row, int col) {

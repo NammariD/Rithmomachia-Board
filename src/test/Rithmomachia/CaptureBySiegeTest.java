@@ -1,10 +1,15 @@
-package Rithmomachia;
+package test.Rithmomachia;
 
 
 
 import java.util.HashSet;
 import java.util.Set;
 import org.junit.Test;
+
+import main.java.Rithmomachia.Board;
+import main.java.Rithmomachia.Piece;
+import main.java.Rithmomachia.Pos;
+
 import org.junit.Assert;
 
 public class CaptureBySiegeTest {

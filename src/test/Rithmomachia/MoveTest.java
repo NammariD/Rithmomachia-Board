@@ -1,9 +1,13 @@
-package Rithmomachia;
+package test.Rithmomachia;
 import static org.junit.Assert.assertEquals;
 
 import java.util.Set;
 
 import org.junit.Test;
+
+import main.java.Rithmomachia.Board;
+import main.java.Rithmomachia.Move;
+import main.java.Rithmomachia.Piece;
 
 public class MoveTest {
 	
@@ -23,7 +27,7 @@ public class MoveTest {
         System.out.print("Test 1\n");
         b.printBoard();
         Piece p = b.getPiece(3, 3);
-        Set<Move> pp = p.findMoves(3, 3, b);
+        Set<Move> pp = p.findMoves(b);
         assertEquals(8, pp.size());
     }
     
@@ -42,7 +46,7 @@ public class MoveTest {
         System.out.print("Test 2\n");
         b.printBoard();
         Piece p = b.getPiece(3, 3);
-        Set<Move> pp = p.findMoves(3, 3, b);
+        Set<Move> pp = p.findMoves(b);
         assertEquals(12, pp.size());
     }
     
@@ -62,7 +66,7 @@ public class MoveTest {
         System.out.print("Test 3\n");
         b.printBoard();
         Piece p = b.getPiece(3, 3);
-        Set<Move> pp = p.findMoves(3, 3, b);
+        Set<Move> pp = p.findMoves(b);
         assertEquals(8, pp.size());
     }
     
